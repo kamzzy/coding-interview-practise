@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3> the result of the calculation is: <span id="solution"></span></h3>
+  
+  <script>
+    // Explain what a callback function is and provide a simple example
+    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    // A callback is a function that is passed to another function as an argument 
+    // its executed after some operation has been completed. 
+    // Below is an example of a simple callback function that logs to the console 
+    // after some operations have been completed.
+
+    const displaySolution = (data) => {
+      document.getElementById("solution").innerHTML = data;
+    }
+    
+    const myCalcuation = (num1, num2, myCallback) => {
+      let sum = num1 + num2;
+      myCallback(sum);
+    }
+    myCalcuation(6,6,displaySolution);
+  </script>
+</body>
+</html>
