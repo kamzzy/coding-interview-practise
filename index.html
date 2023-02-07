@@ -8,15 +8,16 @@
 </head>
 <body>
   <h3> the result of the calculation is: <span id="solution"></span></h3>
+  <h3 id='async'></h3>
   
   <script>
-    // Explain what a callback function is and provide a simple example
+    // 1. Explain what a callback function is and provide a simple example
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     // A callback is a function that is passed to another function as an argument 
     // its executed after some operation has been completed. 
     // Below is an example of a simple callback function that logs to the console 
     // after some operations have been completed.
-
+    // callback functions are used mostly with async functions (check example 2)
     const displaySolution = (data) => {
       document.getElementById("solution").innerHTML = data;
     }
@@ -26,6 +27,14 @@
       myCallback(sum);
     }
     myCalcuation(6,6,displaySolution);
+
+    // 2. Explain asynchronous function
+    // asynchronous functions are functions that runs in parallel with other functions 
+    // example setTimeout()
+    setTimeout(myfunction, 3000);
+    function myfunction() {
+      document.getElementById('async').innerHTML = 'I Love you';
+    }
   </script>
 </body>
 </html>
