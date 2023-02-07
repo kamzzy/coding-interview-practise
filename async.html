@@ -9,6 +9,7 @@
 <body>
   <h3> the result of the calculation is: <span id="solution"></span></h3>
   <h3 id='async'></h3>
+  <h3 id="date"></h3>
   
   <script>
     // 1. Explain what a callback function is and provide a simple example
@@ -34,6 +35,16 @@
     setTimeout(myfunction, 3000);
     function myfunction() {
       document.getElementById('async').innerHTML = 'I Love you';
+    }
+
+    // setInterval()
+    // when calling the js function setInterval() you can specify a callback function to be executed at intervals
+
+    setInterval(myTime,1000);
+    function myTime() {
+      let d = new Date()
+      document.getElementById("date").innerHTML = 
+      d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
     }
   </script>
 </body>
