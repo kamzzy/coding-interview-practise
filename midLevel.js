@@ -4,7 +4,7 @@
 // "fizz" at multiples of 3, "buzz" at multiples of 5 and 
 // "fizzbuzz" at multiples of 3 and 5.
 
-for(let i=1; i <=10; i++){
+for(let i=1; i <=5; i++){
   if((i % 3) === 0){
     console.log('fizz')
   } else if((i % 5) === 0) {
@@ -26,7 +26,9 @@ const anagram = (word1, word2) => {
 // sort the words, join and compare them
    firstWord = word1.toLowerCase().split("").sort().join("")
    secondWord = word2.toLowerCase().split("").sort().join("")
-  return firstWord === secondWord
+  if(firstWord === secondWord) {
+    return "this is an anagram"
+  }else {return "this is not an anagram"}
 }
 console.log(anagram("john", "nojh"))
 //??????????????????????????????????????
