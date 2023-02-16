@@ -74,6 +74,33 @@ const addSix = createBase(6);
 console.log(addSix(10)); // returns 16
 console.log(addSix(21)); // returns 27
 
+// Q10: FizzBuzz Challenge 
+// Problem
+// Create a for loop that iterates up to 100 while outputting 
+// "fizz" at multiples of 3, "buzz" at multiples of 5 and 
+// "fizzbuzz" at multiples of 3 and 5.
+
+for(let i=1; i <=100; i++){
+  if((i % 3) === 0){
+    console.log('fizz')
+  } else if((i % 5) === 0) {
+    console.log('buzz')
+  }else if( (i % 15) === 0) {
+    console.log('fizzbuzz')
+  } else {
+    console.log(i)
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
