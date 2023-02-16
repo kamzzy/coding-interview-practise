@@ -28,3 +28,42 @@ enqueue(63)
 enqueue(8)
 dequeue()
 dequeue()
+
+// Q7: Make this work
+// Problem
+// duplicate([1, 2, 3, 4, 5]); // [1,2,3,4,5,1,2,3,4,5]
+
+const duplicate = (element) => {
+  return console.log(element.concat(element))
+}
+
+ duplicate([1, 2, 3, 4, 5]);
+
+//Q8: Write a "mul" function which will properly when invoked as below syntax 
+// Problem
+// console.log(mul(2)(3)(4)); // output : 24
+// console.log(mul(4)(3)(4)); // output : 48
+////////////////////////////////////
+// The MUL function is a miniature of the multiplication function. 
+// In this function, we call the function that required an argument as a first number,
+//  and that function calls another function that required another argument 
+//  and this step goes on. 
+
+const mul = (num1) =>{
+  return function(num2){
+    return function(num3){
+      return num1 * num2 * num3;
+    }
+  }
+}
+console.log(mul(2)(3)(4)); // output : 24
+console.log(mul(4)(3)(4)); // output : 48
+
+
+
+
+
+
+
+
+
