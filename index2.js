@@ -59,8 +59,20 @@ const mul = (num1) =>{
 console.log(mul(2)(3)(4)); // output : 24
 console.log(mul(4)(3)(4)); // output : 48
 
+// Q9: Write a function that would allow you to do this?
+// Problem
+// const addSix = createBase(6);
+// addSix(10); // returns 16
+// addSix(21); // returns 27
 
-
+const createBase = (baseNumber) => {
+  return function(N) {
+    return baseNumber + N
+  }
+}
+const addSix = createBase(6);
+console.log(addSix(10)); // returns 16
+console.log(addSix(21)); // returns 27
 
 
 
