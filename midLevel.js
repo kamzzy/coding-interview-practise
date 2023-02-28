@@ -93,5 +93,35 @@ caller()
 // [ ], [ 1, "2", 3 ] (arrays)
 // { }, { a: 42 } (objects)
 // function foo() { .. } (functions)
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+// Q14: What will be the output of the following code?
 
+var y = 1;
+if (function f() {}) {
+  y += typeof f;
+}
+console.log(y);
+
+// Answer
+// Above code would give output 1undefined. 
+// If condition statement evaluate using eval so 
+// eval(function f() {}) which return function f() {} 
+// which is true so inside if statement code execute. 
+// typeof f return undefined because if statement code execute at run time, 
+// so statement inside if condition evaluated at run time.
+
+var k = 1;
+if (1) {
+  eval(function foo() {});
+  k += typeof foo;
+}
+console.log(k);
+// Above code will also output 1undefined.
+
+var k = 1;
+if (1) {
+  function foo() {};
+  k += typeof foo;
+}
+console.log(k); // output 1function
