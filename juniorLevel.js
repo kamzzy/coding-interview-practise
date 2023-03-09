@@ -88,5 +88,3 @@ console.log(addSix(21)); // returns 27
 
 
 
-
-

@@ -32,8 +32,8 @@ const removeNthFromEnd = (head, n) => {
   const listLength = head.length;
   const position = listLength - n;
   head.splice(position, 1);
+  console.log(head);
   return head;
  }
 
 removeNthFromEnd([1,2,3,4,5], 2) // [1,2,3,5]
-
